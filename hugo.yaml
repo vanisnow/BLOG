@@ -1,52 +1,114 @@
-baseURL: "http://localhost:1313/"
-title: "My Blog"
-theme: "PaperMod"
+# ===== 站点基础 =====
+# TODO: 部署时把 baseURL 换成你自己的域名
+baseURL: 'http://localhost:1313/'
+title: '感光异常地带'
 paginate: 5
+theme: PaperMod
+locale: 'zh'
+defaultContentLanguage: 'zh'
+hasCJKLanguage: true
 
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+enableEmoji: true
+enableGitInfo: false
 
 minify:
   disableXML: true
   minifyOutput: true
 
+# ===== 全局参数 =====
 params:
   env: production
-  title: "My Blog"
-  description: "A static blog built with Hugo and PaperMod"
-  author: "vanish"
-  DateFormat: "2006-01-02"
-  defaultTheme: auto
+  title: '感光异常地带'
+  description: 'My blog built with Hugo and PaperMod'
+  author: 'vanishsnow'
+
+  DateFormat: '2006-01-02'
+  defaultTheme: auto               # dark / light
+  disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: false
+  ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
+  ShowCodeCopyButtons: false
   ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
   UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
 
+  label:
+    text: '感光异常地带'
+
+  # 主页 - 信息模式（默认）
   homeInfoParams:
-    Title: "Welcome 👋"
-    Content: "This is my blog."
+    Title: "Hi there 👋"
+    Content: "Welcome to my blog."
 
+  # 主页 - 信息模式图标展示
   socialIcons:
     - name: github
-      url: "https://github.com/"
+      url: 'https://github.com/vanisnow'
 
+  # 站内搜索
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ['title', 'permalink', 'summary', 'content']
+
+# ===== 顶部导航栏 =====
 menu:
   main:
-    - identifier: archives
-      name: Archives
-      url: /archives/
+    - identifier: home
+      name: 首页
+      url: /
+      weight: 1
+    - identifier: categories
+      name: 分类
+      url: /categories/
       weight: 10
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 20
     - identifier: tags
-      name: Tags
+      name: 标签
       url: /tags/
-      weight: 30
+      weight: 20
+
+# ===== 代码高亮（PaperMod 用 CSS 类方式）=====
+markup:
+  highlight:
+    noClasses: false
+
+# ===== 隐私：禁用内嵌社交媒体追踪 =====
+privacy:
+  vimeo:
+    disabled: true
+    enableDNT: true
+    simple: true
+  twitter:
+    disabled: true
+    enableDNT: true
+    simple: true
+  instagram:
+    disabled: true
+    simple: true
+  youtube:
+    disabled: true
+    privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
