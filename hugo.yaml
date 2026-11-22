@@ -1,0 +1,52 @@
+baseURL: "http://localhost:1313/"
+title: "My Blog"
+theme: "PaperMod"
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "My Blog"
+  description: "A static blog built with Hugo and PaperMod"
+  author: "vanish"
+  DateFormat: "2006-01-02"
+  defaultTheme: auto
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  UseHugoToc: true
+
+  homeInfoParams:
+    Title: "Welcome 👋"
+    Content: "This is my blog."
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/"
+
+menu:
+  main:
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 10
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
