@@ -92,14 +92,10 @@ menu:
       name: 无目的花园
       url: /garden/
       weight: 40
-    - identifier: categories
-      name: 分类
-      url: /categories/
-      weight: 50
     - identifier: tags
       name: 标签
       url: /tags/
-      weight: 60
+      weight: 50
 
 # ===== 代码高亮（PaperMod 用 CSS 类方式）=====
 markup:
