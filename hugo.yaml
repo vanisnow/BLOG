@@ -76,14 +76,30 @@ menu:
       name: 首页
       url: /
       weight: 1
+    - identifier: boundary
+      name: 意识的边界
+      url: /boundary/
+      weight: 10
+    - identifier: lab
+      name: 生活实验室
+      url: /lab/
+      weight: 20
+    - identifier: beauty
+      name: 美的收藏夹
+      url: /beauty/
+      weight: 30
+    - identifier: garden
+      name: 无目的花园
+      url: /garden/
+      weight: 40
     - identifier: categories
       name: 分类
       url: /categories/
-      weight: 10
+      weight: 50
     - identifier: tags
       name: 标签
       url: /tags/
-      weight: 20
+      weight: 60
 
 # ===== 代码高亮（PaperMod 用 CSS 类方式）=====
 markup:
